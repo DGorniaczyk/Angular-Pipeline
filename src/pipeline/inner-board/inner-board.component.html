@@ -1,0 +1,6 @@
+<div class="example-boundary">
+  <div *ngFor="let block of currentBlocks">
+    <app-block [blockConfig]="block" (moveEventEmitter)="moveEvent($event)" (connectEventEmitter)="connect($event)"></app-block>
+  </div>
+</div>
+

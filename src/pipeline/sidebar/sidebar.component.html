@@ -1,0 +1,10 @@
+<p>sidebar works!</p>
+
+<div *ngFor="let block of blockList">
+  <div (click)="onClickBlock(block.name)">
+    <app-block
+    [blockConfig]="block"
+    [dragDisabled]="true"
+    ></app-block>
+</div>
+</div>

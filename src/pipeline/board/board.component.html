@@ -1,0 +1,25 @@
+<div class="navbar-container">
+<app-navbar></app-navbar>
+</div>
+
+<mat-drawer-container
+  class="drawer-container"
+  autosize>
+  <mat-drawer
+    #drawer
+    class="sidebar-container"
+    mode="side"
+    position="end">
+    <app-sidebar (addBlockEventEmitter)="handleEventAdd($event)"></app-sidebar>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="content-container">
+      <div class="icon-container">
+        <mat-icon (click)="drawer.toggle()">keyboard_double_arrow_left</mat-icon>
+      </div>
+      <app-inner-board></app-inner-board>
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
